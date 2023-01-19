@@ -12,6 +12,9 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-inter)", ...fontFamily.sans],
       },
+      boxShadow: {
+        avatar: "0 0 0 2px #0f172a",
+      },
     },
   },
   plugins: [],
