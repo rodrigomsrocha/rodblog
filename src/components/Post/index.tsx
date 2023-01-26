@@ -19,7 +19,7 @@ export function Post() {
       </header>
       <main className="grid grid-cols-3 gap-16 mb-6">
         <div className="col-span-2">
-          <h1 className="text-3xl text-white mb-4">
+          <h1 className="text-3xl text-white mb-4 font-bold">
             Why I Decided to Invest in My Portfolio as a Junior Developer
           </h1>
           <p className="text-slate-400">
