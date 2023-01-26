@@ -21,7 +21,7 @@ export function Hero() {
             Best productive works advices
           </h1>
           <div className="flex items-center gap-3">
-            <div className="overflow-hidden w-10 h-10 rounded-full relative border-2 border-slate-700 shadow-avatar">
+            <div className="overflow-hidden w-10 h-10 rounded-full relative ring-offset-2 ring-2 ring-slate-700 ring-offset-slate-900">
               <Image
                 src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                 alt=""
@@ -50,7 +50,7 @@ export function Hero() {
               Best practices front-end
             </strong>
             <div className="flex items-center gap-3 mt-auto">
-              <div className="overflow-hidden w-10 h-10 rounded-full relative border-2 border-slate-700 shadow-avatar">
+              <div className="overflow-hidden w-10 h-10 rounded-full relative ring-offset-2 ring-2 ring-slate-700 ring-offset-slate-900">
                 <Image
                   src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                   alt=""
@@ -82,7 +82,7 @@ export function Hero() {
               Best practices front-end
             </strong>
             <div className="flex items-center gap-3 mt-auto">
-              <div className="overflow-hidden w-10 h-10 rounded-full relative border-2 border-slate-700 shadow-avatar">
+              <div className="overflow-hidden w-10 h-10 rounded-full relative ring-offset-2 ring-2 ring-slate-700 ring-offset-slate-900">
                 <Image
                   src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                   alt=""
@@ -114,7 +114,7 @@ export function Hero() {
               Best practices front-end
             </strong>
             <div className="flex items-center gap-3 mt-auto">
-              <div className="overflow-hidden w-10 h-10 rounded-full relative border-2 border-slate-700 shadow-avatar">
+              <div className="overflow-hidden w-10 h-10 rounded-full relative ring-offset-2 ring-2 ring-slate-700 ring-offset-slate-900">
                 <Image
                   src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                   alt=""
