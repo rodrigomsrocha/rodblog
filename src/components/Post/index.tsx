@@ -3,6 +3,7 @@ import { formartPostDate } from "../../utils/formatPostDate";
 
 interface PostProps {
   post: {
+    slug: string;
     title: string;
     excerpt: string | null | undefined;
     cover_img: string | null | undefined;
