@@ -9,3 +9,11 @@
 body {
   background: #1f2937;
 }
+
+pre {
+  background: #0f172a;
+  padding: 1rem;
+  white-space: pre-wrap;
+  color: white;
+  border-radius: 6px;
+}

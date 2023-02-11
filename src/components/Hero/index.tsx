@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { formartPostDate } from "../../utils/formatPostDate";
 
 interface HeroProps {
@@ -37,9 +38,11 @@ export function Hero({ lastPosts }: HeroProps) {
             )}
           </div>
           <span className="text-gray-400 mb-4 block text-sm">8 min read</span>
-          <h1 className="text-white text-2xl mb-4 font-bold">
-            {lastPost.title}
-          </h1>
+          <Link href={lastPost.slug}>
+            <h1 className="text-white text-2xl mb-4 font-bold">
+              {lastPost.title}
+            </h1>
+          </Link>
           <div className="flex items-center gap-3">
             <div className="overflow-hidden w-10 h-10 rounded-full relative ring-offset-2 ring-2 ring-slate-700 ring-offset-slate-900">
               {lastPost.author.img_url && (
@@ -76,9 +79,12 @@ export function Hero({ lastPosts }: HeroProps) {
               </div>
               <div className="flex flex-col">
                 <span className="text-gray-400 mb-3 text-sm">8 min read</span>
-                <strong className="text-xl font-bold text-white w-48 truncate">
-                  {post.title}
-                </strong>
+                <Link
+                  className="text-xl font-bold text-white w-48 truncate"
+                  href={post.slug}
+                >
+                  <strong>{post.title}</strong>
+                </Link>
                 <div className="flex items-center gap-3 mt-auto">
                   <div className="overflow-hidden w-10 h-10 rounded-full relative ring-offset-2 ring-2 ring-slate-700 ring-offset-slate-900">
                     {post.author.img_url && (

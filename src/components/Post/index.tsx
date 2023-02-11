@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { formartPostDate } from "../../utils/formatPostDate";
 
 interface PostProps {
@@ -39,7 +40,9 @@ export function Post({ post }: PostProps) {
       </header>
       <main className="grid grid-cols-3 gap-16 mb-6">
         <div className="col-span-2">
-          <h1 className="text-3xl text-white mb-4 font-bold">{post.title}</h1>
+          <Link href={post.slug}>
+            <h1 className="text-3xl text-white mb-4 font-bold">{post.title}</h1>
+          </Link>
           <p className="text-slate-400">{post.excerpt}</p>
         </div>
         <div className="relative overflow-hidden min-h-[150px] h-full rounded-md mb-4">

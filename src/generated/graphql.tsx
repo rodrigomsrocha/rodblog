@@ -4420,12 +4420,43 @@ export enum _SystemDateTimeFieldVariation {
   Localization = 'localization'
 }
 
+export type PostQueryVariables = Exact<{
+  slug: Scalars['String'];
+}>;
+
+
+export type PostQuery = { __typename?: 'Query', post?: { __typename?: 'Post', title: string, publishedAt?: any | null, author?: { __typename?: 'Author', name: string, picture?: { __typename?: 'Asset', url: string } | null } | null, content: { __typename?: 'RichText', html: string }, coverImage?: { __typename?: 'Asset', url: string } | null } | null };
+
 export type PostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type PostsQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', id: string, slug: string, title: string, excerpt?: string | null, publishedAt?: any | null, tags: Array<string>, author?: { __typename?: 'Author', name: string, picture?: { __typename?: 'Asset', url: string } | null } | null, coverImage?: { __typename?: 'Asset', url: string } | null }> };
 
 
+export const PostDocument = gql`
+    query Post($slug: String!) {
+  post(where: {slug: $slug}) {
+    title
+    publishedAt
+    author {
+      name
+      picture {
+        url(transformation: {image: {resize: {width: 40, height: 40}}})
+      }
+    }
+    content {
+      html
+    }
+    coverImage {
+      url(transformation: {image: {resize: {width: 500, height: 400}}})
+    }
+  }
+}
+    `;
+
+export function usePostQuery(options: Omit<Urql.UseQueryArgs<PostQueryVariables>, 'query'>) {
+  return Urql.useQuery<PostQuery, PostQueryVariables>({ query: PostDocument, ...options });
+};
 export const PostsDocument = gql`
     query Posts {
   posts(orderBy: publishedAt_DESC) {
@@ -4438,7 +4469,7 @@ export const PostsDocument = gql`
     author {
       name
       picture {
-        url
+        url(transformation: {image: {resize: {width: 40, height: 40}}})
       }
     }
     coverImage {

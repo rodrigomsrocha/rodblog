@@ -1,19 +1,18 @@
-query Posts {
-  posts(orderBy: publishedAt_DESC) {
-    id
-    slug
+query Post($slug: String!) {
+  post(where: { slug: $slug }) {
     title
-    excerpt
     publishedAt
-    tags
     author {
       name
       picture {
         url(transformation: { image: { resize: { width: 40, height: 40 } } })
       }
     }
+    content {
+      html
+    }
     coverImage {
-      url
+      url(transformation: { image: { resize: { width: 500, height: 400 } } })
     }
   }
 }
